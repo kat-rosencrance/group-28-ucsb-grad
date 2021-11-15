@@ -20,6 +20,8 @@ ucsb_grad <- read_csv(here("data", "ucsb_grad_data.csv"))
 ```{r}
 ggplot(data = ucsb_grad, aes(x = year_abbr, y = domestic_enrollment)) +
   geom_col(aes(fill = ethnicity), position = "fill")+
-  labs(x = "Year", y = "Number of Students Enrolled", title = "Domestic Enrollment of Students by Year", subtitle = "2008-2020")
+  labs(x = "Year", y = "Portion of Students Enrolled", title = "Domestic Enrollment of Students by Year", subtitle = "2008-2020",
+       caption = "Figure 1. Domestic graduate student enrollment by year. The portion of domestic students \n enrolled is plotted on the y axis against the year they were enrolled on the x axis, ranging \n from 2008 to 2019. The various colors illustrate the ethnicity breakdown for each year.")+
+  theme_minimal()
 ```
 
