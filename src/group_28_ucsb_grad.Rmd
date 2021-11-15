@@ -1,0 +1,19 @@
+---
+title: "Group 28 UCSB  domestic grad enrollment"
+author: "Katherine Rosencrance & Sarah Hamilton"
+date: "11/14/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# Attach appropriate packages
+library(here)
+library(tidyverse)
+```
+
+```{r}
+ucsb_grad <- read_csv(here("data", "ucsb_grad_data.csv"))
+```
+
